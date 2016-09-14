@@ -6,6 +6,7 @@
 	margin: 0 auto;
 	border: 20px solid #fff;
 	box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 /*Ensure our labels are above the pictures*/
@@ -28,12 +29,12 @@
 	content:'';
 	width: 34px;
 	height: 34px;
-	background: rgba(130,195,217,0.9);
+	background: rgba(0,255,0,0.7);
 	position: absolute;
 	left: 50%;
 	margin-left: -17px;
 	border-radius: 50%;
-	box-shadow: 0px 0px 0px 4px rgba(255,255,255,0.3);
+	box-shadow: 0px 0px 0px 4px rgba(255,250,250,0.3);
 	z-index:-1;
 }
 
@@ -61,13 +62,14 @@
 	width: 0px;
 }
 
-/* Change color of selected input/label */
+/* Change color of selected input/label and add text shadow to number */
 
 .cr-container input.cr-selector-img-1:checked ~ label.cr-label-img-1,
 .cr-container input.cr-selector-img-2:checked ~ label.cr-label-img-2,
 .cr-container input.cr-selector-img-3:checked ~ label.cr-label-img-3,
 .cr-container input.cr-selector-img-4:checked ~ label.cr-label-img-4{
-	color: #68abc2;
+	color: #7CFC00;
+  text-shadow: .5px .5px .5px rgba(0,176,12,0.7);
 }
 
 /* And change box-shadow and color of circle */
@@ -77,7 +79,7 @@
 .cr-container input.cr-selector-img-3:checked ~ label.cr-label-img-3:before,
 .cr-container input.cr-selector-img-4:checked ~ label.cr-label-img-4:before{
 	background: #fff;
-	box-shadow: 0px 0px 0px 4px rgba(104,171,194,0.6);
+	box-shadow: 0px 0px 0px 4px rgba(0,255,0,0.6);
 }
 
 /* Hide inputs */
@@ -162,8 +164,13 @@
 
 /* Animate slice slide*/
 .cr-container input:checked ~ .cr-bgimg div span{
+  -webkit-animation: slideOut 0.6s ease-in-out;
+	-moz-animation: slideOut 0.6s ease-in-out;
+	-o-animation: slideOut 0.6s ease-in-out;
+	-ms-animation: slideOut 0.6s ease-in-out;
 	animation: slideOut 0.6s ease-in-out;
 }
+
 @keyframes slideOut{
 	0%{
 		left: 0px;
@@ -196,7 +203,7 @@
 	z-index: 10000;
 	opacity: 0;
 	color: #fff;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+	text-shadow: 1px 1px 1px rgba(0,0,0,1);
 	transition: opacity 0.8s ease-in-out;
 }
 .cr-titles h3 span:nth-child(1){
@@ -208,7 +215,7 @@
 .cr-titles h3 span:nth-child(2){
 	letter-spacing: 0px;
 	display: block;
-	background: rgba(104,171,194,0.9);
+	background: rgba(0,239,12,0.7);
 	font-size: 14px;
 	padding: 10px;
 	font-style: italic;
